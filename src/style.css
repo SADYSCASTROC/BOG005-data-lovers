@@ -1,0 +1,123 @@
+
+*body{
+  background-color: white;
+   height:100vh;
+
+}
+.grid-container{
+    width: 90%;
+    max-width: 1000px;
+    margin: 1.6em;
+    margin: auto;
+    height:100vh;
+    display:grid;
+    background-color:white;
+    grid-template-columns:  20% auto 95px;/*estas propiedades sirven para asignar el número de columnas y filas , así como su tamaño, */
+    grid-template-rows:repeat(4, auto) ;/*repeat  definir el alto de nuestras filas*/
+    grid-gap: 10px;/* propiedad para agregar un espacio de separación entre cada fila y columna*/
+}
+.grid-container >*{
+    background-color: rgb(221, 219, 219);
+  
+}
+header{
+ grid-column: 1/span 4;
+ height: auto;
+ /*background-image:url(/src/img/rio22016\ 1.png);*/
+}
+nav{
+   grid-row:2 /span 3;
+   grid-column:1/span ;
+}
+main{
+    grid-column: 2 / span 3;
+    grid-row:2 /span 2;
+    height: auto;
+}
+aside{
+    grid-column: 2/span 3;
+}
+footer{
+    grid-column: 1/span 4;
+    height:auto;
+}
+
+
+/*informacion tabla 1*/
+.container{
+    height: auto;
+    width: auto;
+    border: 3px solid cadetblue;
+    display: grid;
+    grid-template-columns: repeat(6 ,1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  
+  }
+  
+  .container div{
+    background-color: beige;
+  }
+  .container .titulo{
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end:5;
+  
+  
+  }
+  .container .input{
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end:5;
+  
+  }
+  .nombres h2{
+    text-align: center;
+    background-color: burlywood;
+  }
+  .nombres .lista{
+    margin-left: 20px;
+  }
+
+
+/*barra de nav*/
+.nav img{
+    margin-top: 300px;
+}
+
+/*tabla 2*/
+.tabla2{
+    height: auto;
+    width: auto;
+    border: 3px solid cadetblue;
+    display: grid;
+    grid-template-columns: repeat(10 ,1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3px;
+  
+}
+.tabla2 div{
+    background-color: rgb(254, 254, 254);
+}
+.titulo2{
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end:5;
+}
+.input2{
+  text-align: center;
+  grid-column-start: 5;
+  grid-column-end:-1;
+}
+
+.descripcion h2{
+  text-align: center;
+  background-color: burlywood;
+}
+.lista2{
+  text-align: center;
+}
+
+/* pie de pagina*/
+
+
