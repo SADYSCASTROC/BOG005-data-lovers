@@ -1,8 +1,9 @@
-// estas funciones son de ejemplo
-export const example = () => {
-  return 'example';
-};
+import athletes from "./data/athletes/athletes"
 
-export const anotherExample = () => {
-  return 'OMG';
-};
+// estas funciones son de ejemplo
+export const filterData =(data, condition)=>{
+
+  let datos= athletes;
+  
+
+}
