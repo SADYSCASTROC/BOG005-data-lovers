@@ -1,8 +1,20 @@
-import athletes from "./data/athletes/athletes.js"
 
-// estas funciones son de ejemplo
-export const filterData =(data,condicion)=>{
+// pais
+export const country = (data, country) => {
+    const countryFilterData = data.filter(item => item.team === country);
 
-return data;
+    
+    console.log(countryFilterData)
+    
+  };
 
-}
+  // genero
+  export const gender = (data,gender) => {
+    const genderFilterData = data.filter(item => item.gender === gender);
+      console.log(genderFilterData)
+  };
+  
+
+
+  
+  
