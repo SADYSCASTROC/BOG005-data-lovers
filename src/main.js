@@ -35,15 +35,14 @@ document.getElementById("selectMedal").innerHTML = optionsMedal;
 
 //BOTON DE FILTRO
 document.getElementById("filters").addEventListener("click", filterByCGM);
-
 function filterByCGM() {
   let country = document.getElementById("selectCountry").value;
   let gender = document.getElementById("selectGender").value;
   let medal = document.getElementById("selectMedal").value;
+  let  atletheCount = document.getElementById("atletheCount");
 
   console.log(dataFilter(country, gender, medal));
   let data = dataFilter(country, gender, medal);
-
   //FROMA DE CREAR TABLAS
   let table =
     "<tr>" +
@@ -54,41 +53,34 @@ function filterByCGM() {
     "<th>Especialidad</th>" +
     "<th>Medalla</th>" +
     "</tr>";
-
   for (const reg of data) {
     //reg de registro
     let row = '<tr class="search"><td>';
     row += reg.name; //row = row + reg.name;
     row += "</td>";
-
     row += "<td>";
     row += reg.gender;
     row += "</td>";
-
     row += "<td>";
     row += reg.sport;
     row += "</td>";
-
     row += "<td>";
     row += reg.team;
     row += "</td>";
-
     row += "<td>";
     row += reg.event;
     row += "</td>";
-
     row += "<td>";
     row += reg.medal;
     row += "</td></tr>";
-
     table += row;
   }
-
   document.getElementById("tbl").innerHTML = table;
   document.getElementById("search").value = "";
-  console.log(data);
-}
+  atletheCount.innerHTML = data.length; // Pantalla muestra cantidad de atletas
+  data.length == 0 ? alert("No hay coincidencias")  :''
 
+}
 //FILTRO DE BUSQUEDA
 document.addEventListener("keyup", (evt) => {
   //keyup, oprimir y soltar una tecla
@@ -96,9 +88,12 @@ document.addEventListener("keyup", (evt) => {
     // target referencia al objeto al cual se lanzo el evento
     document.querySelectorAll(".search").forEach((row) => {
       row.textContent.toLowerCase().includes(evt.target.value.toLowerCase()) //operador de sigo
-            });
-  }else{
-    alert("No hay cidencias")
+        ? row.classList.remove("filter") //no oculta
+        : row.classList.add("filter") //oculta
+        // ? console.log("no existe"):
+        // console.log("no existe")
+
+    });
   }
 });
 

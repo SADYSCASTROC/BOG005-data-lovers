@@ -130,6 +130,14 @@ tr:hover{
   text-align: center;
   margin-top: 50px;
  }
+.resultado{
+  display: flex;
+  justify-content: end;
+  text-align: center;
+}
+#atletheCount{
+ margin: 10px;
+}
 
  label > select{
    display: block;
