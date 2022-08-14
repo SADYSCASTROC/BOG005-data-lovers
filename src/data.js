@@ -1,25 +1,4 @@
 
-<<<<<<< HEAD
-// pais
-export const country = (data, country) => {
-    const countryFilterData = data.filter(item => item.team === country);
-
-    
-    console.log(countryFilterData)
-    
-  };
-
-  // genero
-  export const gender = (data,gender) => {
-    const genderFilterData = data.filter(item => item.gender === gender);
-      console.log(genderFilterData)
-  };
-  
-
-
-  
-  
-=======
 
 import athletes from "./data/athletes/athletes.js";
  
@@ -93,4 +72,3 @@ export const medalData = medalArray
     return medalArray.indexOf(medal) == pos;
   })
   .sort();
->>>>>>> main

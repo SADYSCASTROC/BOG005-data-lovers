@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-
-import {country,gender  } from "./data.js";
-import data from "./data/athletes/athletes.js";
-const dataAthet = data.athletes;
-
-
-
-
-=======
 import { countryData, genderData, medalData, dataFilter } from "./data.js";
 //import data from './data/athletes/athletes.js';
 
@@ -17,7 +7,7 @@ import { countryData, genderData, medalData, dataFilter } from "./data.js";
 //function mialerta() {
 ///swal("Oops!", "Something went wrong on the page!", "error");
 
-console.log(dataFilter("Colombia", "all", "all"));
+//console.log(dataFilter("Colombia", "all", "all"));
 
 //CREAR SELECT DE FILTRO DE PAISES
 let optionsCountry = '<option selected value="all">Todos</option>';
@@ -106,11 +96,10 @@ document.addEventListener("keyup", (evt) => {
     // target referencia al objeto al cual se lanzo el evento
     document.querySelectorAll(".search").forEach((row) => {
       row.textContent.toLowerCase().includes(evt.target.value.toLowerCase()) //operador de sigo
-        ? row.classList.remove("filter") //no oculta
-        : row.classList.add("filter"); //oculta
-    });
+            });
+  }else{
+    alert("No hay cidencias")
   }
 });
 
 window.onload = filterByCGM; //carga la tabla al cargar la pagína por priemra vez
->>>>>>> main

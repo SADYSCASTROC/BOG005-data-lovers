@@ -3,48 +3,77 @@
   <head>
     <meta charset="utf-8" />
     <title>Juegos olimpicos Rio Janeiro 2016</title>
-    <meta name="viewport" content="width=device-width"/>
-    <link rel=name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"href="style.css" />
+    <link rel="stylesheet" href="/src/style.css">
   </head>
 
   <body>
-<<<<<<< HEAD
-
-
-
-    <script src="main.js" type="module"></script>
-
-=======
     <!----diseño de pagina-->
+   
     <div class="grid-container">
+      
       <header>
+       
         <div id="logoH">
-          <!--<img class="logoH1" src="/src/img/logo.PNG" alt="" />
-          <img class="logoH2" src="/src/img/rio22016 1.png" alt="" /--->
-        </div>
+          <img class="logoH1" src="/src/img/logo.PNG" alt="" />
+    
       </header>
       <nav>
-        <div><select id="selectCountry" size="7"></select></div>
-        <div><select id="selectGender" size="3"></select></div>
-        <div><select id="selectMedal" size="4"></select></div>
+       <div class="fil">
+          <label for="" class="pais">Pais
+          <select id="selectCountry" size="5"></select>
+        </label>
+
+          <label for="">Genero
+          <select id="selectGender" size="3"></select>
+         </label>
+
+        <label for="">Medalla
+        <select id="selectMedal" size="4"></select></label>
+        <br>
         <div><button type="button" id="filters">Buscar</button></div>
+
+      </div>
+          
       </nav>
       <main>
+        <div class="buscar">
+              <h1>Atletas participantes</h1>
         <input type="text" id="search" placeholder="Buscar..." />
+      </div>
+      <div id="total"></div>
         <div id="table">
           <table id="tbl"></table>
         </div>
       </main>
-      <aside>aside</aside>
+      <aside>
+         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, id est veniam mollitia magnam, suscipit ipsum facere tempore iure quisquam officia dolores debitis, nulla praesentium molestias molestiae deserunt? Veniam, eveniet.
+         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus cupiditate autem ut natus molestiae dolor vero a, tempore ipsam, deserunt quaerat tenetur quae! Explicabo non, similique atque numquam blanditiis fugiat.
+         Beatae doloremque reprehenderit iure, neque in aperiam fugiat. Ut ex harum molestias suscipit facilis odio. Eveniet natus dolorum, tenetur dolore dolor ut suscipit molestiae quam iusto ad? Laboriosam, beatae eum.
+         Voluptates repellat iste, voluptatibus quaerat cum possimus! Error accusamus neque molestiae nulla, fuga hic ipsam praesentium molestias eligendi deserunt ullam nisi, voluptatum nostrum, reiciendis voluptate a. Corporis blanditiis architecto alias?
+      </aside>
       <footer>
-        <div id="logoF">
-          <img class="logoF1" src="/src/img/images.png" alt="" />
-        </div>
+  <div class="conFoter">
+      
+    <div>
+      <a href="">Noticias</a>
+      <a href="">Mascota oficial</a>
+      <a href="">Diseño de medalla</a>
+    </div>
+    
+            <div class="redes">
+             <img src="https://olympics.com/es/images/static/b2p-icons/facebook-white.svg" alt="">
+             <img src="https://olympics.com/es/images/static/b2p-icons/twitter-white.svg" alt="">
+             <img src="https://olympics.com/es/images/static/b2p-icons/instagram-white.svg" alt="">
+             <img src="https://olympics.com/es/images/static/b2p-icons/tiktok-white.svg" alt="">
+             <img src="https://olympics.com/es/images/static/b2p-icons/youtube-white.svg" alt="">
+            </div>
+          </div>
+
+      </div>
+
       </footer>
     </div>
 
     <script src="main.js" type="module"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
->>>>>>> main
   </body>
 </html>

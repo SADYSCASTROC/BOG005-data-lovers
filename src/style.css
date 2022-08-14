@@ -1,91 +1,6 @@
-<<<<<<< HEAD
-
-*body{
-  background-color: rgb(24, 23, 23);
-   height:100vh;
-
-}
-.grid-container{
-    width: 90%;
-    max-width: 1000px;
-    margin: 1.6em;
-    margin: auto;
-    height:100vh;
-    display:grid;
-    background-color:rgb(241, 233, 233);
-    grid-template-columns:  20% auto 95px;/*estas propiedades sirven para asignar el número de columnas y filas , así como su tamaño, */
-    grid-template-rows:repeat(4, auto) ;/*repeat  definir el alto de nuestras filas*/
-    grid-gap: 10px;/* propiedad para agregar un espacio de separación entre cada fila y columna*/
-}
-.grid-container >*{
-    background-color: rgb(221, 219, 219);
-  
-}
-header{
- grid-column: 1/span 4;
- height: auto;
- /*background-image:url(/src/img/rio22016\ 1.png);*/
-}
-nav{
-   grid-row:2 /span 3;
-   grid-column:1/span ;
-}
-main{
-    grid-column: 2 / span 3;
-    grid-row:2 /span 2;
-    height: auto;
-}
-aside{
-    grid-column: 2/span 3;
-}
-footer{
-    grid-column: 1/span 4;
-    height:auto;
-}
-
-/*tabla*/
-.title{
-  text-align: center;
-  font-size: 25px;
-}
-
-th {
-  letter-spacing: 2px;
-}
-
-
-tbody td {
-  text-align: center;
-}
-
-
-thead{
-  color: rgb(0, 0, 0);
-}
-
-
-tbody tr:nth-child(odd) {
-  background-color: rgb(194, 190, 190);
-  
-}
-
-tbody tr:nth-child(even) {
-  background-color: rgb(255, 255, 255);
-}
-
-table {
-  background-color: #585656;
-}
-
-th{
-  background-color: turquoise;
-  border: 2px solid rgb(17, 16, 16);
-}
-
-=======
 *{
-  margin: 100%;
-  padding: 90%;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -93,16 +8,15 @@ th{
 .grid-container {
   display: grid;
   width: 90%;
-  max-width: 1000%;
+  height:100vh;
   margin: 1.6em auto;
-  background-color: rgb(223, 232, 232);
-  grid-template-columns: 170px auto 95px; /*estas propiedades sirven para asignar el número de columnas y filas , así como su tamaño, */
-  grid-template-rows: repeat(4,160px); /*repeat  definir el alto de nuestras filas*/
-  grid-gap: 10px; /* propiedad para agregar un espacio de separación entre cada fila y columna*/
+  background-color: rgb(241, 234, 234);
+  grid-template-columns: 150px auto auto; /*estas propiedades sirven para asignar el número de columnas y filas , así como su tamaño, */
+  grid-template-rows: auto repeat(2,auto); /*repeat  definir el alto de nuestras filas*/
 }
 
 .grid-container > * {
-  background-color: rgb(131, 131, 128);
+  background-color: rgb(251, 251, 251);
 }
 
 header {
@@ -112,18 +26,18 @@ header {
 
 header #logoH {
   width: 100%;
-  height: 100%;
+  height: 350px;
   overflow: hidden;
   position: relative;
   background-color: rgb(255, 255, 255);
+  visibility: 0.5;
+
 }
 
 header #logoH .logoH1 {
   object-fit: cover; /**La iamgen se ajusta deacuerdo al contorno en el que se encuentra **/
   width: 100%;
-  height: 100%;
-  overflow-x: hidden auto;
-  object-position: 20% 59%; /**Se desplaza la imagenen en coordenadas x,y **/
+  height: 500px;
   padding-bottom: 100%;
   position: absolute;
 }
@@ -132,8 +46,6 @@ header #logoH .logoH2 {
   object-fit: scale-down;
   width: 70%;
   height: 70%;
-  position: absolute;
-  padding-left: 20.5%;
 }
 
 nav {
@@ -150,35 +62,23 @@ aside {
 
 footer {
   grid-column: 1 / span 4;
-  height: 130%;
 }
 
-footer #logoF {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  background-color: rgb(255, 255, 255);
+
+
+.logoF1 {
+  width:  100%;
+  max-height: 200px;
 }
 
-footer #logoF .logoF1 {
-  object-fit: cover; /**La iamgen se ajusta deacuerdo al contorno en el que se encuentra **/
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden auto;
-  object-position: 20% 59%; /**Se desplaza la imagenen en coordenadas x,y **/
-  padding-bottom: 100%;
-  position: absolute;
-}
-
-table {
-  border-spacing: 0;
-  width: 100%;
-  border: 1% solid #ddd;
-}
 
 th {
   cursor: pointer;
+  background-color: rgb(4, 48, 64);
+  position: sticky;
+  top: 0;
+  color: #ddd;
+  text-align: center;
 }
 
 th,
@@ -188,21 +88,82 @@ td {
 }
 
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #7ebce0;
+}
+tr:hover{
+  background-color: rgb(3, 4, 77);
+  color: #ddd;
 }
 
 #table {
+  border: 10px solid #ddd;
   overflow: scroll;
-  height: 200%;
-  width: 500%;
+  height: 350px;
+  width: auto;
+  margin-top: 10px;
 }
 
 #table table {
-  width: 100%;
-  background-color: lightgray;
+  background-color: rgb(198, 242, 229);
 }
 
 .filter {
   display: none;
 }
->>>>>>> main
+ .buscar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  margin: 50px;
+ }
+
+ input:hover{
+  background-color: #eaeaef;
+  color: rgb(18, 17, 17);
+ }
+
+ #search{
+  border-radius: 10px;
+  min-height: 25px;
+  width: 30%;
+  text-align: center;
+  margin-top: 50px;
+ }
+
+ label > select{
+   display: block;
+   border-radius: 5px;
+ }
+ nav > div{
+  margin-top: 200px;
+ }
+ select{
+  width: 70%;
+ }
+ #filters{
+  width: 50%;
+  margin-bottom: 20px;
+ }
+ aside{
+  margin-top: 30px;
+ }
+
+ footer{
+  margin-top: 100px;
+ }
+ 
+.redes >img{
+  margin-top: 30px;
+  margin: 5px;
+}
+
+.conFoter{
+  background-color: #56565a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+  justify-content: center;
+}
+
