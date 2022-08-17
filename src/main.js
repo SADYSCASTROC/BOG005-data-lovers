@@ -1,8 +1,6 @@
 //import { countryData, genderData, medalData, dataFilter } from "./data.js";
 //import data from './data/athletes/athletes.js';
 
-/**Alertas de errores con ventana emergente */
-//document.getElementById("decode").addEventListener("click", mialerta);
 
 //function mialerta() {
 ///swal("Oops!", "Something went wrong on the page!", "error");
@@ -68,23 +66,18 @@ function filterByCGM(){
     let row = "<tr class=\"search\"><td>";
     row += reg.name;
     row += "</td>";
-
     row += "<td>";
     row += reg.gender;
     row += "</td>";
-
     row += "<td>";
     row += reg.sport;
     row += "</td>";
-
     row += "<td>";
     row += reg.team;
     row += "</td>";
-
     row += "<td>";
     row += reg.event;
     row += "</td>";
-
     row += "<td>";
     row += reg.medal;
     row += "</td> </tr>";

@@ -1,24 +1,21 @@
-// import { countryData, genderData, medalData, dataFilter } from "../src/data.js";
+import { example, anotherExample } from "../src/data.js";
 
+describe("example", () => {
+  it("is a function", () => {
+    expect(typeof example).toBe("function");
+  });
 
-// describe('seleciono pais colombia', () => {
-//   it('is a function', () => {
-//     expect(typeof countryData).toBe('function');
-//   });
+  it("returns `example`", () => {
+    expect(example()).toBe("example");
+  });
+});
 
-//   it('returns `array`', () => {
-//     expect(example()).toBe('example');
-//   });
-// });
+describe("anotherExample", () => {
+  it("is a function", () => {
+    expect(typeof anotherExample).toBe("function");
+  });
 
-
-// describe('genderData', () => {
-//   it('is a function', () => {
-//     expect(typeof genderData).toBe('function');
-//   });
-
-//   it("returns `anotherExample`", () => {
-//     expect(anotherExample()).toBe("OMG");
-//   });
-  
-// });
+  it("returns `anotherExample`", () => {
+    expect(anotherExample()).toBe("OMG");
+  });
+});

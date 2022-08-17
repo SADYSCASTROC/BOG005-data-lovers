@@ -1,4 +1,3 @@
-// estas funciones son de ejemplo
 
 
 import athletes from "./data/athletes/athletes.js";
