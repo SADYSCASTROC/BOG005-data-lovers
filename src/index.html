@@ -3,40 +3,101 @@
   <head>
     <meta charset="utf-8" />
     <title>Juegos olimpicos Rio Janeiro 2016</title>
-    <meta name="viewport" content="width=device-width"/>
-    <link rel=name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"href="style.css" />
+    <link rel="stylesheet" href="/src/style.css">
   </head>
 
   <body>
     <!----diseño de pagina-->
-    <div class="grid-container">
+   
+    <div class="container">
+      
       <header>
+       
         <div id="logoH">
-          <!--<img class="logoH1" src="/src/img/logo.PNG" alt="" />
-          <img class="logoH2" src="/src/img/rio22016 1.png" alt="" /--->
+          <img class="logoH1" src="/src/img/logo.PNG" alt="" />
         </div>
       </header>
+
+     <div class="contenido">  
       <nav>
-        <div><select id="selectCountry" size="7"></select></div>
-        <div><select id="selectGender" size="3"></select></div>
-        <div><select id="selectMedal" size="4"></select></div>
-        <div><button type="button" id="filters">Buscar</button></div>
-      </nav>
+       <div class="fil">
+           <label for="" class="pais">Pais
+           <select id="selectCountry" size="3"></select>
+           </label>
+
+           <label for="">Genero
+           <select id="selectGender" size="3"></select>
+           </label>
+
+            <label for="">Medalla
+            <select id="selectMedal" size="3"></select>
+           </label>
+            <br>
+            <div><button type="button" id="filters">Buscar</button></div>
+
+      
+          </div> 
+          
+        </nav>
+
+
       <main>
-        <input type="text" id="search" placeholder="Buscar..." />
-        <div id="table">
-          <table id="tbl"></table>
-        </div>
-      </main>
-      <aside>aside</aside>
+          <div class="buscar">
+              <h1>Atletas participantes</h1>
+           <input type="text" id="search" placeholder="Buscar..." />
+          </div>
+
+                <div class="resultado" >
+                  <div class="labelResul">Resultado de busqueda </div>
+                  <div id="atletheCount"></div>
+                </div>
+                  <div id="table">
+                    <table id="tbl"></table>
+                  </div>
+          </main>
+
+     </div>
+
+      <aside>
+        <h2 class="sobreLosJuegos">Sobre los juegos</h2>
+        <div class="noticias">
+        <h2>Un espacio para grandes actuaciones</h2>
+        <p>Los Juegos de Río 2016 ofrecieron el mejor entorno posible para alcanzar el mejor rendimiento. <br>
+           Los atletas disfrutaron de unas 
+          instalaciones de primer nivel,  incluida una  magnífica villa, todo ubicado <br>
+           en una de las ciudades más bellas del mundo, en una estructura 
+          compacta para una máxima comodidad.
+        </p>
+        <h2>Estructura compacta </h2>
+        <p>De las 34 sedes de competición, ocho pasaron por trabajos permanentes, siete fueron completamente <br>
+           temporales y nueve se construyeron como sedes permanentes de legado.
+
+      </div> 
+      </aside>
       <footer>
-        <div id="logoF">
-          <img class="logoF1" src="/src/img/images.png" alt="" />
-        </div>
+         <div class="conFoter">
+      
+                <div>
+                    <a href="">Noticias</a>
+                    <a href="">Mascota oficial</a>
+                      <a href="">Diseño de medalla</a>
+                  </div>
+              
+                      <div class="redes">
+                      <img src="https://olympics.com/es/images/static/b2p-icons/facebook-white.svg" alt="">
+                      <img src="https://olympics.com/es/images/static/b2p-icons/twitter-white.svg" alt="">
+                      <img src="https://olympics.com/es/images/static/b2p-icons/instagram-white.svg" alt="">
+                      <img src="https://olympics.com/es/images/static/b2p-icons/tiktok-white.svg" alt="">
+                      <img src="https://olympics.com/es/images/static/b2p-icons/youtube-white.svg" alt="">
+                      </div>
+           </div>
+
+
       </footer>
     </div>
 
+  
+
     <script src="main.js" type="module"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
 </html>
