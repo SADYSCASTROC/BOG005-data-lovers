@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <title>Juegos olimpicos Rio Janeiro 2016</title>
-    <meta name="viewport" content="width=device-width"/>
-    <link rel=name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"href="style.css" />
+    <!-- <meta name="viewport" content="width=device-width"/> -->
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
@@ -12,8 +12,8 @@
     <div class="grid-container">
       <header>
         <div id="logoH">
-          <!--<img class="logoH1" src="/src/img/logo.PNG" alt="" />
-          <img class="logoH2" src="/src/img/rio22016 1.png" alt="" /--->
+          <img class="logoH1" src="/src/img/logo.PNG" alt="" />
+          <img class="logoH2" src="/src/img/rio22016 1.png" alt="" />
         </div>
       </header>
       <nav>
@@ -21,12 +21,29 @@
         <div><select id="selectGender" size="3"></select></div>
         <div><select id="selectMedal" size="4"></select></div>
         <div><button type="button" id="filters">Buscar</button></div>
+
+        <div> <select  id="selecta-z" size="2"></select></div>
+        <div><button type="button" id="odenar"> Ordenar </button> </div>
       </nav>
       <main>
-        <input type="text" id="search" placeholder="Buscar..." />
-        <div id="table">
-          <table id="tbl"></table>
-        </div>
+        <!-- <input type="text" id="search" placeholder="Buscar..." /> -->
+       <div id="table">
+       <table>  
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Genero</th>
+            <th>Deporte</th>
+            <th>País</th>
+            <th>Especialidad</th>
+            <th>Medalla</th>
+          </tr>
+        </thead>
+        <tbody id="tbl">
+          
+        </tbody>
+       </table>
+       </div>
       </main>
       <aside>aside</aside>
       <footer>
