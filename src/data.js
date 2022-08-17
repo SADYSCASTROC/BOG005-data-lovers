@@ -3,12 +3,7 @@
 import athletes from "./data/athletes/athletes.js";
  
 export const dataFilter = (country, gender, medal) => {
-  //const allData = Object.values(athletes.athletes);
-  //let filterSport = allData.filter(athletes => athletes.sport == sports);
-  //let filterSport = athletes.athletes.filter(athletes => athletes.sport == sports);//con este tengo  que ser mas exacta
-  // let filterSport = athletes.athletes.filter(
-  //   (athletes) => athletes.sport.toLowerCase().includes(sports.toLowerCase()) //con este toma concidencias
-  // );
+  
   let filterCountry = athletes.athletes;
   let filterGender = filterCountry;
   let filterMedal = filterGender;
@@ -36,10 +31,11 @@ export const dataFilter = (country, gender, medal) => {
   return filterMedal;
 };
 
+
 let countriesArray = []; //vector
 
-for (let country of athletes.athletes) {
-  countriesArray.push(country.team);
+for (let athlete of athletes.athletes) {
+  countriesArray.push(athlete.team);
 }
 
 export const countryData = countriesArray
@@ -72,3 +68,11 @@ export const medalData = medalArray
     return medalArray.indexOf(medal) == pos;
   })
   .sort();
+
+
+
+
+
+
+  
+  

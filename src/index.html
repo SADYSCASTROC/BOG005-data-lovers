@@ -9,75 +9,94 @@
   <body>
     <!----diseño de pagina-->
    
-    <div class="grid-container">
+    <div class="container">
       
       <header>
        
         <div id="logoH">
           <img class="logoH1" src="/src/img/logo.PNG" alt="" />
-    
+        </div>
       </header>
+
+     <div class="contenido">  
       <nav>
        <div class="fil">
-          <label for="" class="pais">Pais
-          <select id="selectCountry" size="5"></select>
-        </label>
+           <label for="" class="pais">Pais
+           <select id="selectCountry" size="3"></select>
+           </label>
 
-          <label for="">Genero
-          <select id="selectGender" size="3"></select>
-         </label>
+           <label for="">Genero
+           <select id="selectGender" size="3"></select>
+           </label>
 
-        <label for="">Medalla
-        <select id="selectMedal" size="4"></select></label>
-        <br>
-        <div><button type="button" id="filters">Buscar</button></div>
+            <label for="">Medalla
+            <select id="selectMedal" size="3"></select>
+           </label>
+            <br>
+            <div><button type="button" id="filters">Buscar</button></div>
 
-      </div>
-          
-      </nav>
-      <main>
-        <div class="buscar">
-              <h1>Atletas participantes</h1>
-        <input type="text" id="search" placeholder="Buscar..." />
-      </div>
-
-      <div class="resultado" >
-      <div class="labelResul">Resultado de busqueda
-      <div id="atletheCount"></div>
-      </div>
-    </div>
-        <div id="table">
-          <table id="tbl"></table>
-        </div>
-      </main>
-      <aside>
-         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, id est veniam mollitia magnam, suscipit ipsum facere tempore iure quisquam officia dolores debitis, nulla praesentium molestias molestiae deserunt? Veniam, eveniet.
-         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus cupiditate autem ut natus molestiae dolor vero a, tempore ipsam, deserunt quaerat tenetur quae! Explicabo non, similique atque numquam blanditiis fugiat.
-         Beatae doloremque reprehenderit iure, neque in aperiam fugiat. Ut ex harum molestias suscipit facilis odio. Eveniet natus dolorum, tenetur dolore dolor ut suscipit molestiae quam iusto ad? Laboriosam, beatae eum.
-         Voluptates repellat iste, voluptatibus quaerat cum possimus! Error accusamus neque molestiae nulla, fuga hic ipsam praesentium molestias eligendi deserunt ullam nisi, voluptatum nostrum, reiciendis voluptate a. Corporis blanditiis architecto alias?
-      </aside>
-      <footer>
-  <div class="conFoter">
       
-    <div>
-      <a href="">Noticias</a>
-      <a href="">Mascota oficial</a>
-      <a href="">Diseño de medalla</a>
-    </div>
-    
-            <div class="redes">
-             <img src="https://olympics.com/es/images/static/b2p-icons/facebook-white.svg" alt="">
-             <img src="https://olympics.com/es/images/static/b2p-icons/twitter-white.svg" alt="">
-             <img src="https://olympics.com/es/images/static/b2p-icons/instagram-white.svg" alt="">
-             <img src="https://olympics.com/es/images/static/b2p-icons/tiktok-white.svg" alt="">
-             <img src="https://olympics.com/es/images/static/b2p-icons/youtube-white.svg" alt="">
-            </div>
+          </div> 
+          
+        </nav>
+
+
+      <main>
+          <div class="buscar">
+              <h1>Atletas participantes</h1>
+           <input type="text" id="search" placeholder="Buscar..." />
           </div>
 
-      </div>
+                <div class="resultado" >
+                  <div class="labelResul">Resultado de busqueda </div>
+                  <div id="atletheCount"></div>
+                </div>
+                  <div id="table">
+                    <table id="tbl"></table>
+                  </div>
+          </main>
+
+     </div>
+
+      <aside>
+        <h2 class="sobreLosJuegos">Sobre los juegos</h2>
+        <div class="noticias">
+        <h2>Un espacio para grandes actuaciones</h2>
+        <p>Los Juegos de Río 2016 ofrecieron el mejor entorno posible para alcanzar el mejor rendimiento. <br>
+           Los atletas disfrutaron de unas 
+          instalaciones de primer nivel,  incluida una  magnífica villa, todo ubicado <br>
+           en una de las ciudades más bellas del mundo, en una estructura 
+          compacta para una máxima comodidad.
+        </p>
+        <h2>Estructura compacta </h2>
+        <p>De las 34 sedes de competición, ocho pasaron por trabajos permanentes, siete fueron completamente <br>
+           temporales y nueve se construyeron como sedes permanentes de legado.
+
+      </div> 
+      </aside>
+      <footer>
+         <div class="conFoter">
+      
+                <div>
+                    <a href="">Noticias</a>
+                    <a href="">Mascota oficial</a>
+                      <a href="">Diseño de medalla</a>
+                  </div>
+              
+                      <div class="redes">
+                      <img src="https://olympics.com/es/images/static/b2p-icons/facebook-white.svg" alt="">
+                      <img src="https://olympics.com/es/images/static/b2p-icons/twitter-white.svg" alt="">
+                      <img src="https://olympics.com/es/images/static/b2p-icons/instagram-white.svg" alt="">
+                      <img src="https://olympics.com/es/images/static/b2p-icons/tiktok-white.svg" alt="">
+                      <img src="https://olympics.com/es/images/static/b2p-icons/youtube-white.svg" alt="">
+                      </div>
+           </div>
+
 
       </footer>
     </div>
+
+  
 
     <script src="main.js" type="module"></script>
   </body>

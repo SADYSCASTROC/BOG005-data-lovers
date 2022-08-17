@@ -1,16 +1,8 @@
 import { countryData, genderData, medalData, dataFilter } from "./data.js";
-//import data from './data/athletes/athletes.js';
 
-/**Alertas de errores con ventana emergente */
-//document.getElementById("decode").addEventListener("click", mialerta);
 
-//function mialerta() {
-///swal("Oops!", "Something went wrong on the page!", "error");
-
-//console.log(dataFilter("Colombia", "all", "all"));
-
-//CREAR SELECT DE FILTRO DE PAISES
 let optionsCountry = '<option selected value="all">Todos</option>';
+
 for (const contry of countryData) {
   optionsCountry += '<option value="' + contry + '">' + contry + "</option>";
 }
@@ -90,8 +82,7 @@ document.addEventListener("keyup", (evt) => {
       row.textContent.toLowerCase().includes(evt.target.value.toLowerCase()) //operador de sigo
         ? row.classList.remove("filter") //no oculta
         : row.classList.add("filter") //oculta
-        // ? console.log("no existe"):
-        // console.log("no existe")
+
 
     });
   }
