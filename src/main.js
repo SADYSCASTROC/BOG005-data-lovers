@@ -1,6 +1,5 @@
 import { countryData, genderData, medalData, dataFilter } from "./data.js";
 
-
 let optionsCountry = '<option selected value="all">Todos</option>';
 
 for (const contry of countryData) {
@@ -28,14 +27,20 @@ document.getElementById("selectMedal").innerHTML = optionsMedal;
 //BOTON DE FILTRO
 document.getElementById("filters").addEventListener("click", filterByCGM);
 function filterByCGM() {
+
   let country = document.getElementById("selectCountry").value;
   let gender = document.getElementById("selectGender").value;
   let medal = document.getElementById("selectMedal").value;
   let  atletheCount = document.getElementById("atletheCount");
-
-  console.log(dataFilter(country, gender, medal));
   let data = dataFilter(country, gender, medal);
   //FROMA DE CREAR TABLAS
+
+
+  let noencontrado = `
+  <img src="/src/img/no-hay-resultados.png" alt="">
+  `;
+
+  
   let table =
     "<tr>" +
     "<th>Nombre</th>" +
@@ -67,10 +72,23 @@ function filterByCGM() {
     row += "</td></tr>";
     table += row;
   }
+
+  if(data.length>0){
+    console.log("sadys")
+
   document.getElementById("tbl").innerHTML = table;
+  document.getElementById("table").style= " "; // show
   document.getElementById("search").value = "";
   atletheCount.innerHTML = data.length; // Pantalla muestra cantidad de atletas
-  data.length == 0 ? alert("No hay coincidencias")  :''
+  document.getElementById("noDatos").style.visibility = "hidden";
+
+}else{
+  document.getElementById("table").style.display = "none";
+  atletheCount.innerHTML = 0; // Pantalla muestra cantidad de atletas
+  document.getElementById("noDatos").innerHTML = noencontrado;
+  document.getElementById("noDatos").style.visibility = "visible"; // show
+
+}
 
 }
 //FILTRO DE BUSQUEDA
@@ -89,3 +107,17 @@ document.addEventListener("keyup", (evt) => {
 });
 
 window.onload = filterByCGM; //carga la tabla al cargar la pagína por priemra vez
+document.getElementById("pantallados").style.display = "none";
+
+//pantalla uno
+
+document.getElementById('infoAtletas').addEventListener('click',function(){
+  document.getElementById("pantallaUno").style.display = "none";
+  document.getElementById("pantallados" ).style.display = ''; // show
+});
+
+//Inicio de pantalla dos
+document.getElementById('inicio').addEventListener('click',function(){
+  document.getElementById("pantallados" ).style.display = "none"; // show
+document.getElementById("pantallaUno").style.display = '';
+});
