@@ -1,10 +1,13 @@
-import { countryData, genderData, medalData, dataFilter } from "./data.js";
+import { countryData, genderData, medalData, dataFilter, } from "./data.js";
+
+import { percentage } from './data.js';
 
 let optionsCountry = '<option selected value="all">Todos</option>';
 
 for (const contry of countryData) {
   optionsCountry += '<option value="' + contry + '">' + contry + "</option>";
 }
+
 
 document.getElementById("selectCountry").innerHTML = optionsCountry;
 
@@ -33,14 +36,12 @@ function filterByCGM() {
   let medal = document.getElementById("selectMedal").value;
   let  atletheCount = document.getElementById("atletheCount");
   let data = dataFilter(country, gender, medal);
-  //FROMA DE CREAR TABLAS
-
-
+  let porWomennn=percentage();
   let noencontrado = `
   <img src="/src/img/no-hay-resultados.png" alt="">
   `;
+  //FROMA DE CREAR TABLAS
 
-  
   let table =
     "<tr>" +
     "<th>Nombre</th>" +
@@ -71,10 +72,26 @@ function filterByCGM() {
     row += reg.medal;
     row += "</td></tr>";
     table += row;
+
+
   }
 
   if(data.length>0){
-    console.log("sadys")
+
+    //mostrar pais y pocentaje de mujeres
+    if(country!=="all"){
+      document.getElementById("porcentajeWomen").innerHTML = porWomennn+"%"+"  "+"Femenino";
+      document.getElementById("porcentajeMen").innerHTML =100-parseFloat(porWomennn)+"%"+"  "+"Masculino";
+      document.getElementById("countryPorcentaje").innerHTML = country;
+      
+    }
+
+    if(country==="all"){
+      document.getElementById("porcentajeWomen").innerHTML = porWomennn+"%"+"  "+"Femenino";
+      document.getElementById("porcentajeMen").innerHTML =100-parseFloat(porWomennn)+"%"+"  "+"Masculino";
+      document.getElementById("countryPorcentaje").innerHTML = "Todos los paises";
+
+    }
 
   document.getElementById("tbl").innerHTML = table;
   document.getElementById("table").style= " "; // show
@@ -83,6 +100,9 @@ function filterByCGM() {
   document.getElementById("noDatos").style.visibility = "hidden";
 
 }else{
+  document.getElementById("porcentajeWomen").innerHTML = "0"+"%"+"  "+"Femenino";
+  document.getElementById("porcentajeMen").innerHTML = "0"+"%"+"  "+"Masculino";
+  document.getElementById("countryPorcentaje").innerHTML = country;
   document.getElementById("table").style.display = "none";
   atletheCount.innerHTML = 0; // Pantalla muestra cantidad de atletas
   document.getElementById("noDatos").innerHTML = noencontrado;

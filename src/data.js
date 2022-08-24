@@ -1,9 +1,9 @@
 
 
 import athletes from "./data/athletes/athletes.js";
- 
+
+let arrayGlobar=[]
 export const dataFilter = (country, gender, medal) => {
-  
   let filterCountry = athletes.athletes;
   let filterGender = filterCountry;
   let filterMedal = filterGender;
@@ -28,6 +28,8 @@ export const dataFilter = (country, gender, medal) => {
     );
   }
 
+  arrayGlobar=filterMedal
+
   return filterMedal;
 };
 
@@ -35,6 +37,7 @@ export const dataFilter = (country, gender, medal) => {
 let countriesArray = []; //vector
 
 for (let athlete of athletes.athletes) {
+
   countriesArray.push(athlete.team);
 }
 
@@ -48,8 +51,10 @@ export const countryData = countriesArray
 let gendersArray = [];
 
 for (let gender of athletes.athletes) {
+  
   gendersArray.push(gender.gender);
 }
+
 
 export const genderData = gendersArray
   .filter((gender, pos) => {
@@ -64,13 +69,27 @@ for (let medal of athletes.athletes) {
 }
 
 export const medalData = medalArray
+
+
   .filter((medal, pos) => {
     return medalArray.indexOf(medal) == pos;
   })
   .sort();
 
+// funcion calcular
+export const percentage = () => {
+  let auxWomen=0;
+  arrayGlobar.map((index) => {
+  if(index.gender==="F"){
+    auxWomen++;
+  }
+ })
 
+ let porWomen= (auxWomen*100)/arrayGlobar.length;
+ let stringOfPaid=porWomen.toFixed(1);
+ return stringOfPaid;
 
+};
 
 
 

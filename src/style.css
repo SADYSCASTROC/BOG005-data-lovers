@@ -2,25 +2,23 @@
   margin: 0;
   padding: 0;
 }
+ html,body{
+  height:100%;
+
+}
 
 #pantallaUno{
 
-    background-color: #2196f3;
-    font-family: "helvetica neue";
-    background: url(/src/img/fondo\ \(1\).png), #2196f3;
-    background: url(fondo.png),
-     -webkit-gradient(linear, right top, left top, from(#2196f3), to(#009688));
-  background: url(fondo.png),
-  linear-gradient(to left, #2196f3, #009688);
-  height:100vh;
+  background-color: #0d0d0d;
+  font-family: "helvetica neue";
   display: flex;
   flex-direction: row;
-
+  height: auto;
 }
 .imagenPaginaUno{
   width: 300px;
   height: 300px;
-  background-color: #565656;
+  background-color: #f7f7f7;
   transform: rotate(45deg);
   border-radius: 50px;
   position: relative;
@@ -64,15 +62,17 @@
   margin: auto;
   margin-left: 200px;
   width: 50%;
+  height: 100%;
 }
 .sectionPantallaUno>button {
-  margin: 10px;
-  height: 50px;
-  width: 50%;
-  border-radius: 15px;
-  background-color: blue;
-  color: cornsilk;
-  font-size: x-large;
+  
+    margin: 10px;
+    height: 30px;
+    width: 40%;
+    border-radius: 15px;
+    background-color: blue;
+    color: cornsilk;
+    font-size: medium;
 }
 .noticias{
   margin-top: 20px;
@@ -86,7 +86,6 @@
 .contenido{
   display: flex;
   flex-direction: row;
-  width: 100%;
 }
 nav{
   display: inline-block;
@@ -104,6 +103,9 @@ main{
   display: inline-block;
   width:85% ;
   height: auto;
+}
+#pantallados{
+ height: 100%;
 }
 .container {
   width: 90%;
@@ -123,6 +125,13 @@ header #logoH .logoH1 {
   width: 100%;
   height: 350px;
   margin-top: 20px;
+}
+
+.porcentaje{
+  background-color: rgb(251, 251, 251);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 30%;
+  text-align: center;
 }
 
 header #logoH .logoH2 {
@@ -245,7 +254,7 @@ tr:hover{
 #noDatos img{
   height: 150px;
 }
- @media (max-width:980px) {
+ @media only screen and ( min-width:601px) and ( max-width:980px ) {
   
   .contenido{
     flex-direction: column;
@@ -286,16 +295,114 @@ tr:hover{
     margin-top: 20px;
     font-size: 20px;
    }
-  
+
+     /*Pantalla uno*/
+   #pantallaUno{
+    display: block;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  .imagenesprinci{
+    width: 100%;
+  }
+  .sectionPantallaUno>button {
+    margin: 10px;
+    height: 30px;
+    width: 40%;
+    border-radius: 15px;
+    background-color: blue;
+    color: cornsilk;
+    font-size: medium;
+    margin-left: -41px;
+  }
+  .imagenPaginaUno {
+    width: 200px;
+    height: 200px;
+    margin-left: 51px;
+  }
+  }
+  .h1>img {
+    height: 80px;
+    margin-top: 19px;
+    margin-left: 25px;
+   }
+  .imagenPaginaUno >img {
+    transform: rotate(310deg);
+    height: 200px;
+    width: 200px;
+   }
+  .sectionPantallaUno{
+   display: flex;
+   align-items: center;
+   background-color: #0d0d0d !important;
+  }
+
  
- }
+@media only screen and ( max-width:600px ) {
+  
+  #pantallaUno{
+    display: block;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  .noticias >p{
+    font-size: 15px;
+  }
+  .imagenesprinci{
+    width: 1000%;
+  }
+  .imagenPaginaUno {
+    width: 200px;
+    height: 200px;
 
- @media (max-width:500px) {
+  }
+  .imagenPaginaUno >img {
+    width: 200px;
+    height: 200px;
+  }
+  .noticias> h1{
+    font-size: larger;
+    text-align: center;
+    
+  }
+  .noticias >p {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-left: 30px;
+  }
+  .imagenesprinci >.imagenPaginaUno{
+    margin-top: 15px;
 
-  aside{
-  display: block;
-  width: 100%;
-  margin-top: 80px;
+  }
+  .imagenesprinci>.h1 {
+    margin-top: 130px;
+    margin-left: 150px;
+  }
+  .h1>h1{
+    font-size: 20px;
+    margin-right: 150px;
+  }
+  .h1>img{
+    width: 100px;
+  }
+  
+  .sectionPantallaUno{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+   }
+   .sectionPantallaUno>button {
+    margin: 5px;
+    height: 30px;
+    width: 30%;
+    border-radius: 15px;
+    background-color: blue;
+    color: cornsilk;
+    font-size: revert;
 }
- }
+}
+
+
+
  
