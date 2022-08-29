@@ -1,94 +1,86 @@
 
-
-import athletes from "./data/athletes/athletes.js";
-
-let arrayGlobar=[]
-export const dataFilter = (country, gender, medal) => {
+export const dataFilter = (athletes,country, gender, medal) => {
   let filterCountry = athletes.athletes;
   let filterGender = filterCountry;
   let filterMedal = filterGender;
   if (country != "all") {
-    filterCountry = filterCountry.filter(
-      (athletes) => athletes.team.toLowerCase().includes(country.toLowerCase()) //con este toma concidencias
+    filterCountry = filterCountry.filter((athletes) =>
+      athletes.team.includes(country)
     );
     filterGender = filterCountry;
     filterMedal = filterGender;
   }
-
   if (gender != "all") {
-    filterGender = filterGender.filter(
-      (athletes) => athletes.gender.toLowerCase().includes(gender.toLowerCase()) //con este toma concidencias
+    filterGender = filterGender.filter((athletes) =>
+      athletes.gender.includes(gender)
     );
     filterMedal = filterGender;
   }
-
   if (medal != "all") {
-    filterMedal = filterGender.filter(
-      (athletes) => athletes.medal.toLowerCase().includes(medal.toLowerCase()) //con este toma concidencias
+    filterMedal = filterMedal.filter((athletes) =>
+      athletes.medal.includes(medal)
     );
   }
-
-  arrayGlobar=filterMedal
+ // console.log(filterMedal)
 
   return filterMedal;
+  
+}
+
+export const countryData = (athletes) => {
+  let countriesArray = [];
+  for (const country of (athletes.athletes)) {
+    countriesArray.push(country.team);
+  }
+   console.log(countriesArray)
+  return countriesArray
+    .filter((country, pos) => {
+       console.log(countriesArray.indexOf(country) == pos)
+      return countriesArray.indexOf(country) == pos;
+    })
+    .sort(); //permite organizar de menor a mayor un array
+};
+export const genderData = (athletes) => {
+  let gendersArray = [];
+  for (const gender of athletes.athletes) {
+    gendersArray.push(gender.gender);
+  }
+ // console.log(gendersArray)
+
+  return gendersArray
+    .filter((gender, pos) => {
+      return gendersArray.indexOf(gender) == pos;
+    })
+    .sort(); //permite organizar de menor a mayor un array
+};
+
+export const medalData = (athletes) => {
+  let medalsArray = [];
+  for (const medal of athletes.athletes) {
+    medalsArray.push(medal.medal);
+  }
+  return medalsArray
+    .filter((medal, pos) => {
+      return medalsArray.indexOf(medal) == pos;
+    })
+    .sort(); //permite organizar de menor a mayor un array
 };
 
 
-let countriesArray = []; //vector
-
-for (let athlete of athletes.athletes) {
-
-  countriesArray.push(athlete.team);
-}
-
-export const countryData = countriesArray
-  .filter((country, pos) => {
-    //array de strings
-    return countriesArray.indexOf(country) == pos; //me retorna el primer indice en el se encuntra un elemento
-  })
-  .sort(); // organiza por orden alfabetico
-
-let gendersArray = [];
-
-for (let gender of athletes.athletes) {
-  
-  gendersArray.push(gender.gender);
-}
-
-
-export const genderData = gendersArray
-  .filter((gender, pos) => {
-    return gendersArray.indexOf(gender) == pos;
-  })
-  .sort();
-
-let medalArray = [];
-
-for (let medal of athletes.athletes) {
-  medalArray.push(medal.medal);
-}
-
-export const medalData = medalArray
-
-
-  .filter((medal, pos) => {
-    return medalArray.indexOf(medal) == pos;
-  })
-  .sort();
-
 // funcion calcular
-export const percentage = () => {
+export const percentage = (dataaa) => {
+
   let auxWomen=0;
-  arrayGlobar.map((index) => {
+  dataaa.map((index) => {
   if(index.gender==="F"){
     auxWomen++;
   }
  })
 
- let porWomen= (auxWomen*100)/arrayGlobar.length;
- let stringOfPaid=porWomen.toFixed(1);
- return stringOfPaid;
+ let porWomen= (auxWomen*100)/dataaa.length;
+ let result = Number(porWomen.toFixed(2));
 
+ return result;
 };
 
 

@@ -1,10 +1,10 @@
+import athletes from "./data/athletes/athletes.js";
 import { countryData, genderData, medalData, dataFilter, } from "./data.js";
-
 import { percentage } from './data.js';
 
-let optionsCountry = '<option selected value="all">Todos</option>';
 
-for (const contry of countryData) {
+let optionsCountry = '<option selected value="all">Todos</option>';
+for (const contry of countryData (athletes)) {
   optionsCountry += '<option value="' + contry + '">' + contry + "</option>";
 }
 
@@ -13,15 +13,16 @@ document.getElementById("selectCountry").innerHTML = optionsCountry;
 
 //CREAR SELECT DE FILTRO DE GENEROS
 let optionsGender = '<option selected value="all">Todos</option>';
-for (const gender of genderData) {
+for (const gender of genderData (athletes)) {
   optionsGender += "<option value=" + gender + ">" + gender + "</option>";
 }
+
 
 document.getElementById("selectGender").innerHTML = optionsGender;
 
 //CREAR SELECT DE FILTRO DE MEDALLAS
 let optionsMedal = '<option selected value="all">Todos</option>';
-for (const medal of medalData) {
+for (const medal of medalData(athletes)) {
   optionsMedal += "<option value=" + medal + ">" + medal + "</option>";
 }
 
@@ -35,8 +36,9 @@ function filterByCGM() {
   let gender = document.getElementById("selectGender").value;
   let medal = document.getElementById("selectMedal").value;
   let  atletheCount = document.getElementById("atletheCount");
-  let data = dataFilter(country, gender, medal);
-  let porWomennn=percentage();
+  let data = dataFilter(athletes,country, gender, medal);
+  let porWomennn=percentage(data);
+  //console.log(data)
   let noencontrado = `
   <img src="/src/img/no-hay-resultados.png" alt="">
   `;
@@ -72,8 +74,6 @@ function filterByCGM() {
     row += reg.medal;
     row += "</td></tr>";
     table += row;
-
-
   }
 
   if(data.length>0){
