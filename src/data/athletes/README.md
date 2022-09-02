@@ -48,16 +48,16 @@ se construirá una página web que permitirá a los usuarios acceder a informaci
 * cuando necesiten información sobre los deportistas que participaron por país en este evento
 
 ### Historias de usuario
-![historias de usuario](/src/img/h.u.PNG)
-![historia de usuario](/src/img/h.u1.PNG)
+![historias de usuario](img/h.u.PNG)
+![historia de usuario](img/h.u1.PNG)
 
 #### Prototipo de baja fidelidad
-![historias de usuario](/src/img/protobaja.PNG)
-![historia de usuario](/src/img/p.baja.PNG)
+![historias de usuario](img/protobaja.PNG)
+![historia de usuario](img/p.baja.PNG)
 
 #### Prototipo de alta fidelidad
-![historias de usuario](/src/img/figma.PNG)
-![historia de usuario](/src/img/pagina-de-inicio.png)
+![historias de usuario](img/figma.PNG)
+![historia de usuario](img/pagina.png)
 
 #### Testeos de usabilidad
 
