@@ -49,15 +49,15 @@ se construirá una página web que permitirá a los usuarios acceder a informaci
 
 ### Historias de usuario
 ![historias de usuario](/src/img/h.u.PNG)
-![historia de usuario](src/img/h.u1.PNG)
+![historia de usuario](/src/img/h.u1.PNG)
 
 #### Prototipo de baja fidelidad
-![historias de usuario](src/img/protobaja.PNG)
-![historia de usuario](src/img/pbaja.PNG)
+![historias de usuario](/src/img/protobaja.PNG)
+![historia de usuario](/src/img/p.baja.PNG)
 
 #### Prototipo de alta fidelidad
-![historias de usuario](src/img/figma.PNG)
-![historia de usuario](src/img/pagina.PNG)
+![historias de usuario](/src/img/figma.PNG)
+![historia de usuario](/src/img/pagina-de-inicio.png)
 
 #### Testeos de usabilidad
 
