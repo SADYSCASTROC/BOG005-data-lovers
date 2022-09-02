@@ -64,9 +64,12 @@ export const medalData = (athletes) => {
         .sort(); //permite organizar de menor a mayor un array
 };
 
+ let porWomen= (auxWomen*100)/dataaa.length;
+ let result = Number(porWomen.toFixed(2));
 
 // funcion calcular
 export const percentage = (dataaa) => {
+
 
     let auxWomen = 0;
     dataaa.map((index) => {
