@@ -57,7 +57,7 @@ se construirá una página web que permitirá a los usuarios acceder a informaci
 
 #### Prototipo de alta fidelidad
 ![historias de usuario](img/figma.PNG)
-![historia de usuario](img/pagina.png)
+![historia de usuario](img/pagina.PNG)
 
 #### Testeos de usabilidad
 
