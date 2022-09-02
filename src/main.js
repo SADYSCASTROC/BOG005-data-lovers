@@ -47,6 +47,7 @@ function filterByCGM(order) {
     let gender = document.getElementById("selectGender").value;
     let medal = document.getElementById("selectMedal").value;
 
+
     let atletheCount = document.getElementById("atletheCount");
     let arrayData = dataFilter(athletes, country, gender, medal);
     let porWomennn = percentage(arrayData);
@@ -94,7 +95,7 @@ function filterByCGM(order) {
     }
 
     if (arrayData.length > 0) {
-
+        console.log("mayor a 0");
         //mostrar pais y pocentaje de mujeres
         if (country !== "all") {
             document.getElementById("porcentajeWomen").innerHTML = porWomennn + "%" + "  " + " e Mujeres Participantes";
@@ -109,6 +110,7 @@ function filterByCGM(order) {
             document.getElementById("countryPorcentaje").innerHTML = "Todos los Paises";
 
         }
+        document.getElementById("table").style.display = "";
 
         document.getElementById("tbl").innerHTML = table;
         //document.getElementById("table").style = " "; // show
@@ -117,10 +119,12 @@ function filterByCGM(order) {
         document.getElementById("noDatos").style.visibility = "hidden";
 
     } else {
+
+        document.getElementById("table").style.display = "none";
+
         document.getElementById("porcentajeWomen").innerHTML = "0" + "%" + "  " + "De Mujeres Participantes";
         document.getElementById("porcentajeMen").innerHTML = "0" + "%" + "  " + " De Hombres Participantes";
         document.getElementById("countryPorcentaje").innerHTML = country;
-        document.getElementById("table").style.display = "none";
         atletheCount.innerHTML = 0; // Pantalla muestra cantidad de atletas
         document.getElementById("noDatos").innerHTML = noencontrado;
         document.getElementById("noDatos").style.visibility = "visible"; // show
