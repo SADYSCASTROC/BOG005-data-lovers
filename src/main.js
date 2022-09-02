@@ -1,5 +1,5 @@
-import athletes from "./data/athletes/athletes.js";
 
+import athletes from "./data/athletes/athletes.js";
 import { percentage, countryData, genderData, medalData, dataFilter, } from "./data.js";
 
 //CREAR SELECT DE FILTRO DE PAISES
@@ -20,7 +20,6 @@ document.getElementById("selectGender").innerHTML = optionsGender;
 let optionsMedal = '<option value="all">Todos</option>';
 for (const medal of medalData(athletes)) {
     optionsMedal += '<option value="' + medal + '">' + medal + "</option>";
-
 }
 document.getElementById("selectMedal").innerHTML = optionsMedal;
 
