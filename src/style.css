@@ -1,92 +1,232 @@
-*{
-  margin: 0;
-  padding: 0;
+* {
+    margin: 0;
+    padding: 0;
 }
-body{
+
+html,
+body {
+    height: 100%;
+}
+
+body {
     background-image: url("img/fondo.png");
     background-repeat: repeat;
     background-size: 70%;
     background-color: rgb(131, 131, 131, 0.5);
 }
 
-.container{
-  width: 75%;
-  max-width: 1000px;
-  margin:0 auto;
-  overflow: hidden; /* permite ajustar el formato  */
+
+/*pagina uno*/
+
+#pantallaUno {
+    background-color: #0d0d0d;
+    font-family: "helvetica neue";
+    display: flex;
+    flex-direction: row;
+    height: auto;
 }
 
-header #logoH{
-  width: 100%;
-  height: 35%;
-  overflow: hidden; 
-}
-header #logoH .logoH1{
-  width: 100%;
-  height: 35%;
-
-}
-h1{
-  text-align: center;
-  font-size: 35px;
-  font-weight: bold;
-  margin-top: 10%;
+.imagenPaginaUno {
+    width: 300px;
+    height: 300px;
+    background-color: #f7f7f7;
+    transform: rotate(45deg);
+    border-radius: 50px;
+    position: relative;
+    left: 200px;
+    top: 50px;
 }
 
-#inicio{
-	border-radius: 10px;
-	width: 65px;
-	height: 45px;
-	background-color: rgb(9, 10, 10);
-	color: #f9f9f9;
-}
- #filters{
-	border-radius: 10px;
-	width: 75px;
-	height: 45px;
-	background: rgb(45,253,198);
-    background: linear-gradient(0deg, rgba(45,253,198,0.5833683815323004) 48%, rgba(34,193,195,1) 66%);
- }
-label,.pais,.genero,.medalla{
-	justify-self: start;
+.imagenPaginaUno>img {
+    transform: rotate(310deg);
+    height: 300px;
+    width: 300px;
 }
 
-
-  label > select{
-   display: block;
-   border-radius: 5px;
-   background-color: #75757d(0,05);
-  
+.imagenesprinci {
+    width: 32%;
 }
 
- 
- select{
-  width: 30%;
-  text-decoration: none;
-   
-}
- 
-	
-.buscar{
-  font-size: 10px;
-   margin-top: 10px 30px 30px;
-   text-align: center;
-   
+.imagenesprinci>img {
+    height: 90px;
 }
 
-#search{
-  border-radius: 10px;
-  max-height:50px;
-  width: 40%;
-  margin-top: 70px 70px;
-  height: 40px;
- }
+.imagenesprinci>.h1 {
+    margin-top: 130px;
+    margin-left: 250px;
+}
 
- .search1 {
+.h1 {
+    margin-bottom: 20px;
+    height: auto;
+}
 
-    box-shadow: 0 2px 3px rgb(0 0 0/ 0.15);/*sombras*/
+.h1>h1 {
+    font-size: 25px;
+    color: cornsilk;
+}
+
+.h1>img {
+    height: 100px;
+}
+
+.sectionPantallaUno {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-left: 200px;
+    width: 50%;
+    height: 250%;
+}
+
+.sectionPantallaUno>button {
+    margin: 10px;
+    height: 30px;
+    width: 40%;
+    border-radius: 15px;
+    background-color: blue;
+    color: cornsilk;
+    font-size: medium;
+}
+
+.noticias {
+    margin-top: 20px;
+    width: 60%;
+    color: #ddd;
+    font-size: 20px;
+    height: auto;
+}
+
+
+/*pagina dos*/
+
+.filter {
+    display: none;
+}
+
+.porcentaje {
+    background-color: rgb(251, 251, 251);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 30%;
+    text-align: center;
+}
+
+.resultado {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    font-size: 20px;
+}
+
+#atletheCount {
+    margin: 10px;
+}
+
+
+/* footer {
+  margin-top: 100px;
+}
+
+.redes>img {
+  margin-top: 30px;
+  margin: 5px;
+}
+
+.conFoter {
+  background-color: #7ebce0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+  justify-content: center;
+} */
+
+#noDatos {
+    text-align: center;
+}
+
+#noDatos img {
+    height: 150px;
+}
+
+.container {
+    width: 75%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    /* permite ajustar el formato  */
+}
+
+header #logoH {
+    width: 100%;
+    height: 35%;
+    overflow: hidden;
+}
+
+header #logoH .logoH1 {
+    width: 100%;
+    height: 35%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 10%;
+}
+
+#inicio {
+    border-radius: 10px;
+    width: 65px;
+    height: 45px;
+    background-color: rgb(9, 10, 10);
+    color: #f9f9f9;
+}
+
+#filters {
+    border-radius: 10px;
+    width: 75px;
+    height: 45px;
+    background: rgb(45, 253, 198);
+    background: linear-gradient(0deg, rgba(45, 253, 198, 0.5833683815323004) 48%, rgba(34, 193, 195, 1) 66%);
+}
+
+label,
+.pais,
+.genero,
+.medalla {
+    justify-self: start;
+}
+
+label>select {
+    display: block;
+    border-radius: 5px;
+    background-color: #75757d(0, 05);
+}
+
+select {
+    width: 30%;
+    text-decoration: none;
+}
+
+.buscar {
+    font-size: 10px;
+    margin-top: 10px 30px 30px;
+    text-align: center;
+}
+
+#search {
+    border-radius: 10px;
+    max-height: 50px;
+    width: 50%;
+    margin-top: 70px 70px;
+    height: 40px;
+}
+
+.search1 {
+    box-shadow: 0 2px 3px rgb(0 0 0/ 0.15);
+    /*sombras*/
     border: 1px solid #d3d6e4;
-    
 }
 
 .search1::placeholder {
@@ -100,8 +240,8 @@ label,.pais,.genero,.medalla{
     outline: none;
 }
 
-#btn{
-	color: transparent;
+#btn {
+    color: transparent;
 }
 
 .icon {
@@ -112,20 +252,23 @@ label,.pais,.genero,.medalla{
     color: transparent;
     float: right;
 }
+
 .table {
     width: 100%;
-    height:400px;/* Altura */
+    height: 400px;
+    /* Altura */
     overflow: auto;
 }
 
 .table table {
-    border-collapse: separate;;/*se utiliza para fusionar los bordes de la celdas de mi tabla*/
-  /*border-spacing: 0;/* especifica la distancia entre los bordes de celdas adyacentes*/
+    border-collapse: separate;
+    ;
+    /*se utiliza para fusionar los bordes de la celdas de mi tabla*/
+    /*border-spacing: 0;/* especifica la distancia entre los bordes de celdas adyacentes*/
     border-spacing: 0;
-	}
+}
 
 .table table thead {
-    
     position: sticky;
     top: 0;
     left: 0;
@@ -136,110 +279,253 @@ label,.pais,.genero,.medalla{
     background-color: #FFF;
 }
 
-.table table thead th{
-	border: 1px solid #222222;
-	background: rgb(34,193,195);
-background: linear-gradient(0deg, rgba(34,193,195,1) 22%, rgba(45,253,170,0.5833683815323004) 53%);
+.table table thead th {
+    border: 1px solid #222222;
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 22%, rgba(45, 253, 170, 0.5833683815323004) 53%);
 }
+
 table tr th,
 table tr td {
-  padding: 0.5625em 0.625em;
-  font-size: 0.875em;
-  color: #222222;
-  border: 1px solid #dddddd;
+    padding: 0.5625em 0.625em;
+    font-size: 0.875em;
+    color: #222222;
+    border: 1px solid #dddddd;
 }
+
 
 /* table tr.even,
 table tr.alt,
 table tr:nth-of-type(even) {
   background: #f9f9f9; */
-  .confoter{
-  width: 100%;
-  height: 80%;
- 
-  }
 
-  .redes{
-  max-width: 100%;
-  height: 80%;
-  background: rgb(45,253,198);
-  background: linear-gradient(0deg, rgba(45,253,198,0.5833683815323004) 20%, rgba(4,10,10,1) 46%);
-  }
+.confoter {
+    width: 100%;
+    height: 80%;
+}
+
+.redes {
+    max-width: 100%;
+    height: 80%;
+    background: rgb(45, 253, 198);
+    background: linear-gradient(0deg, rgba(45, 253, 198, 0.5833683815323004) 20%, rgba(4, 10, 10, 1) 46%);
+}
 
 @media only screen and (max-width: 780px) {
-  .search{
-    border-radius: 10px;
-    max-height:50px;
-    width: 40%;
-    margin-top: 60px 30PX;
-    height: 40px;
-  }
-   select{
-  width: 40%;
-  text-decoration: none;
-}
-.fill{
-  position: center;
-}
-#filters{
-		margin-top: 30px ;
-		
-	}
-label > select{
-   display: block;
-   text-align: center;
-   margin-top: 20px;
-   }
-   select{
-  margin-top: 10px;
-  margin-left: 60px;
-  width: 75%;
-  height: 35px;
-  text-decoration: none;
-}
-h1{
-	margin-bottom: 50px;
-}
+    /*Pantalla uno*/
+    #pantallaUno {
+        display: block;
+        height: 100%;
+        overflow-x: hidden;
+    }
+    .imagenesprinci {
+        width: 40%;
+    }
+    .sectionPantallaUno>button {
+        margin: 10px;
+        height: 30px;
+        width: 40%;
+        border-radius: 15px;
+        background-color: blue;
+        color: cornsilk;
+        font-size: medium;
+        margin-left: -0.65px;
+    }
+    .imagenPaginaUno {
+        width: 200px;
+        height: 200px;
+        margin-left: 51px;
+    }
+    .h1>h1 {
+        font-size: 20px;
+        margin-left: 70px;
+    }
+    .h1>img {
+        height: 80px;
+        margin-top: 19px;
+        margin-left: 35px;
+    }
+    .imagenPaginaUno>img {
+        transform: rotate(310deg);
+        height: 200px;
+        width: 200px;
+    }
+    .sectionPantallaUno {
+        display: flex;
+        align-items: center;
+        background-color: #0d0d0d !important;
+    }
+    .porcentaje {
+        margin-top: 20px;
+        text-align: center;
+        display: block;
+        width: 10cm;
+        padding-top: 20px;
+    }
+    .filter {
+        display: none;
+    }
+    .search {
+        border-radius: 10px;
+        max-height: 50px;
+        width: 40%;
+        margin-top: 60px 30PX;
+        height: 40px;
+    }
+    select {
+        width: 40%;
+        text-decoration: none;
+    }
+    .fill {
+        position: center;
+    }
+    #filters {
+        margin-top: 30px;
+    }
+    label>select {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+    }
+    select {
+        margin-top: 10px;
+        margin-left: 60px;
+        width: 75%;
+        height: 35px;
+        text-decoration: none;
+    }
+    h1 {
+        margin-bottom: 50px;
+    }
+    .porcentaje {
+        margin-top: 20px;
+        text-align: center;
+        display: block;
+        width: 10cm;
+        padding-top: 20px;
+    }
 }
 
-  @media screen and (max-width: 400px) {
-
-#filters{
-		margin-top: 20px;
-	}
-	label > select{
-   display: block;
-   text-align: center;
-   margin-top: 10px;
-   }
-   select{
-  margin-top: 10px;
-  margin-left: 40px;
-  width: 70%;
-  height: 35px;
-  text-decoration: none;
+@media screen and (max-width: 400px) {
+    /*pantalla uno*/
+    #pantallaUno {
+        display: block;
+        height: 100%;
+        overflow-x: hidden;
+    }
+    .noticias>p {
+        font-size: 15px;
+    }
+    .imagenesprinci {
+        width: 10%;
+    }
+    .imagenPaginaUno {
+        width: 150px;
+        height: 150px;
+        margin-left: -70px;
+    }
+    .imagenPaginaUno>img {
+        width: 150px;
+        height: 150px;
+        margin-left: 0px;
+    }
+    .noticias>h1 {
+        font-size: larger;
+        text-align: center;
+        margin-left: 10px;
+    }
+    .noticias>p {
+        font-size: 15px;
+        margin-top: 15px;
+        margin-left: 30px;
+    }
+    .imagenesprinci>.imagenPaginaUno {
+        margin-top: 45px;
+    }
+    .imagenesprinci>.h1 {
+        margin-top: 130px;
+        margin-left: 150px;
+    }
+    .h1>h1 {
+        font-size: 20px;
+        max-width: fit-content;
+        margin-left: 10px;
+    }
+    .h1>img {
+        width: 100px;
+        margin-left: 0px;
+    }
+    .sectionPantallaUno {
+        display: flex;
+        align-items: center;
+        margin: auto;
+        width: 100%;
+    }
+    .sectionPantallaUno>button {
+        margin: 5px;
+        height: 30px;
+        width: 30%;
+        border-radius: 15px;
+        background-color: blue;
+        color: cornsilk;
+        font-size: revert;
+    }
+    .filter {
+        display: none;
+    }
+    #filters {
+        margin-top: 20px;
+    }
+    label>select {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
+    select {
+        margin-top: 10px;
+        margin-left: 40px;
+        width: 70%;
+        height: 35px;
+        text-decoration: none;
+    }
+    h1 {
+        margin-bottom: 30px;
+    }
+    .table {
+        width: 100%;
+        height: 400px;
+        /* Altura de ejemplo */
+        overflow: auto;
+    }
+    .table table {
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+    .table table thead {
+        position: sticky;
+        top: 0;
+        left: 0;
+    }
+    .buscar {
+        font-size: 10px;
+        margin-top: 10px 30px 30px;
+        text-align: center;
+    }
+    #search {
+        border-radius: 10px;
+        max-height: 50px;
+        width: 50%;
+        margin-top: 70px 80px;
+        height: 40px;
+    }
+    .porcentaje {
+        margin-top: 10px 10px 10px 10px;
+        text-align: center;
+        display: block;
+        width: 8cm;
+        font-size: 11px;
+    }
+    .resultado {
+        font-size: 18px;
+    }
 }
-h1{
-	margin-bottom: 30px;
-}
-   
- .table {
-    width: 100%;
-    height:400px;/* Altura de ejemplo */
-    overflow: auto;
-}
-
-.table table {
-    border-collapse: separate;
-    border-spacing: 0;
-}
-
-.table table thead {
-    
-    position: sticky;
-    top: 0;
-    left: 0;
-}
-}
-
-  
