@@ -48,7 +48,7 @@ se construirá una página web que permitirá a los usuarios acceder a informaci
 * cuando necesiten información sobre los deportistas que participaron por país en este evento
 
 ### Historias de usuario
-![historias de usuario](src/img/h.u.PNG)
+![historias de usuario](/src/img/h.u.PNG)
 ![historia de usuario](src/img/h.u1.PNG)
 
 #### Prototipo de baja fidelidad
