@@ -1,6 +1,8 @@
 import athletes from "./datamock.js";
 import { percentage } from '../src/data.js';
-import { dataFilter, } from "../src/data.js";
+import { dataFilter } from "../src/data.js";
+import { countryData,genderData,medalData } from "../src/data.js";
+
 
 describe("dataFilter", () => {
     it("is a function", () => {
@@ -65,6 +67,42 @@ describe("dataFilter", () => {
         }, ]);
     });
 });
+
+describe("countryData", () => {
+    it('is a function', () => {
+        expect(typeof countryData).toBe('function');
+    });
+    it('return paises en orden ', () => {
+        expect(countryData(athletes)).toEqual(
+            ["Azerbaijan",
+                "Colombia",
+                "France",
+                "Iran",
+                "Italy",
+                "Russia",
+            
+            ]);
+    });
+});
+describe("genderData", () => {
+    it('is a function', () => {
+        expect(typeof genderData).toBe('function');
+    });
+    it('return genero en orden ', () => {
+        expect(genderData(athletes)).toEqual(
+            ["F", "M"]);
+    });
+});
+describe("medalData", () => {
+    it('is a function', () => {
+        expect(typeof medalData).toBe('function');
+    });
+    it('return medalla en orden ', () => {
+        expect(medalData(athletes)).toEqual(
+            ["Bronze", "Gold", "Silver"]);
+    });
+});
+
 
 let arrayFil = [{
         "name": "Giovanni Abagnale",

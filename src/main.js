@@ -52,7 +52,7 @@ function filterByCGM(order) {
     let arrayData = dataFilter(athletes, country, gender, medal);
     let porWomennn = percentage(arrayData);
     let noencontrado = `
-  <img src="/src/img/no-hay-resultados.png" alt="">
+  <img src="/img/no-hay-resultados.png" alt="">
   `;
     //FROMA DE CREAR TABLAS
 
