@@ -52,8 +52,8 @@ function filterByCGM(order) {
     let arrayData = dataFilter(athletes, country, gender, medal);
     let porWomennn = percentage(arrayData);
     let noencontrado = `
-  <img src="/img/no-hay-resultados.png" alt="">
-  `;
+    <img src="/src/img/no-hay-resultados.png" alt="">
+    `; 
     //FROMA DE CREAR TABLAS
 
     if (order == "1") {
@@ -99,7 +99,6 @@ function filterByCGM(order) {
         if (country !== "all") {
             document.getElementById("porcentajeWomen").innerHTML = porWomennn + "%" + "  " + " e Mujeres Participantes";
             document.getElementById("porcentajeMen").innerHTML = 100 - parseFloat(porWomennn) + "%" + "  " + " De Hombres Participantes";
-            document.getElementById("countryPorcentaje").innerHTML = country;
 
         }
 
@@ -107,26 +106,25 @@ function filterByCGM(order) {
             document.getElementById("porcentajeWomen").innerHTML = porWomennn + "%" + "  " + " De Mujeres Participantes";
             document.getElementById("porcentajeMen").innerHTML = 100 - parseFloat(porWomennn) + "%" + "  " + " De Hombres Participantes";
             document.getElementById("countryPorcentaje").innerHTML = "Todos los Paises";
+            document.getElementById("countryPorcentaje").innerHTML = "Todos los Paises";
 
         }
         document.getElementById("table").style.display = "";
-
+        document.getElementById("noDatos").style.display = "none";
         document.getElementById("tbl").innerHTML = table;
-        //document.getElementById("table").style = " "; // show
         document.getElementById("search").value = "";
         atletheCount.innerHTML = arrayData.length; // Pantalla muestra cantidad de atletas
-        document.getElementById("noDatos").style.visibility = "hidden";
-
+        
     } else {
 
         document.getElementById("table").style.display = "none";
-
+        document.getElementById("noDatos").innerHTML = noencontrado;
+        document.getElementById("noDatos").style.display = "";
         document.getElementById("porcentajeWomen").innerHTML = "0" + "%" + "  " + "De Mujeres Participantes";
         document.getElementById("porcentajeMen").innerHTML = "0" + "%" + "  " + " De Hombres Participantes";
         document.getElementById("countryPorcentaje").innerHTML = country;
         atletheCount.innerHTML = 0; // Pantalla muestra cantidad de atletas
-        document.getElementById("noDatos").innerHTML = noencontrado;
-        document.getElementById("noDatos").style.visibility = "visible"; // show
+        // show
 
     }
 
